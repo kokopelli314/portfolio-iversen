@@ -151,7 +151,7 @@ footer .right-side {
 
 /* Second Section - Featured Project */
 .section.rectangle-2 {
-    width: 100%;
+	padding: 2rem 8rem;
 	background-color: #F2F2F2;
 }
 .breakout-box {
@@ -160,7 +160,7 @@ footer .right-side {
     flex-wrap: wrap;
     justify-content: space-around;
     z-index: 1;
-    margin: 4em;
+    margin: 2rem 0;
     background-color: #FFF;
     padding: 1em;
 }

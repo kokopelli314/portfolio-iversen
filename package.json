@@ -1,0 +1,22 @@
+{
+  "name": "iversen-portfolio",
+  "version": "1.0.0",
+  "description": "",
+  "main": "src/app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://kokopelli314@github.com/kokopelli314/portfolio-iversen.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kokopelli314/portfolio-iversen/issues"
+  },
+  "homepage": "https://github.com/kokopelli314/portfolio-iversen#readme",
+  "dependencies": {
+    "express": "^4.16.3"
+  }
+}
