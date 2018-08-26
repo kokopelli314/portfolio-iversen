@@ -148,10 +148,19 @@ footer .right-side {
     margin: 1em 0.5em;
 }
 
+/* Fold image - bridging rectangles 1 and 2 */
+.fold-image {
+	width: 1170px;
+	height: 501px;
+	position: absolute;
+	top: 69%;
+	left: 50%;
+	margin-left: -585px;
+}
 
 /* Second Section - Featured Project */
 .section.rectangle-2 {
-	padding: 2rem 8rem;
+	padding: calc(2rem + 400px) 8rem 2rem 8rem;
 	background-color: #F2F2F2;
 }
 .breakout-box {
@@ -215,10 +224,6 @@ footer .right-side {
     margin-top: 2.7rem;
     margin-bottom: 2.7rem;
 }
-.contact-form label {
-    position: absolute;
-    pointer-events: none;
-}
 .contact-form input, .contact-form textarea {
 	font-family: inherit;
     text-transform: none;
@@ -236,6 +241,7 @@ footer .right-side {
 .contact-form input {
 	font-size: 1em;
 	border-bottom: 2px solid #2A2A2A;
+	background-color: none;
 }
 .contact-form textarea {
 	font-size: 0.9em;
@@ -245,6 +251,17 @@ footer .right-side {
 	font-style: italic;
 	font-size: 0.9em;
 	color: inherit;
+}
+.contact-form label {
+	position: absolute;
+	top: 0.25rem;
+    pointer-events: none;
+	transition: all 0.25s ease-in;
+}
+.contact-form input:focus ~ label,
+.contact-form .active input ~ label {
+	top: -1.25em;
+	font-size: 0.7em;
 }
 
 
@@ -286,7 +303,6 @@ p {
     background-color: hsl(347, 74%, 44%);
     border: 1px solid hsl(347, 74%, 44%);
 }
-
 .round-button.dark {
     border: 1px solid hsl(0, 0%, 16%);
     color: hsl(0, 0%, 16%);

@@ -15,6 +15,8 @@
 	</div>
 </div>
 
+<img class="fold-image" src="FoldLaptop.jpg">
+
 <!-- Featured Project section  -->
 <div class="section rectangle-2">
 	<h1 class="big-text">
@@ -73,7 +75,7 @@
 
 
 <!-- Contact Form -->
-<div class="section rectangle-4">
+<div id="contact" class="section rectangle-4">
 	<div class="left-side">
 		<h1 class="big-text">Let’s Chat</h1>
 		<p>Or just connect on social media.</p>
@@ -85,20 +87,29 @@
 		</div>
 	</div>
 	<form class="contact-form">
-		<div class="field-wrapper">
+		<div class="field-wrapper" :class="{active: isActive(contactName, 'contact_name')}">
+			<input v-model="contactName"
+				type="text" name="contact_name" id="contact_name"
+			/>
 			<label for="contact_name">Name</label>
-			<input type="text" name="contact_name" id="contact_name" />
 		</div>
-		<div class="field-wrapper">
+		<div class="field-wrapper" :class="{active: isActive(contactEmail, 'contact_email')}">
+			<input v-model="contactEmail"
+				type="text" name="contact_email" id="contact_email"
+			/>
 			<label for="contact_email">Email</label>
-			<input type="text" name="contact_email" id="contact_email" />
 		</div>
-		<div class="field-wrapper">
+		<div class="field-wrapper" :class="{active: isActive(contactPhone, 'contact_phone')}">
+			<input v-model="contactPhone"
+				type="text" name="contact_phone" id="contact_phone"
+			/>
 			<label for="contact_phone">Phone (optional)</label>
-			<input type="text" name="contact_phone" id="contact_phone" />
 		</div>
-		<div class="field-wrapper">
-			<textarea placeholder="What would you like to chat about?"></textarea>
+		<div class="field-wrapper" :class="{active: isActive(contactMessage, 'contact_message')}">
+			<textarea v-model="contactMessage"
+				id="contact_message"
+				placeholder="What would you like to chat about?"
+			></textarea>
 		</div>
 		<button type="submit" class="round-button dark">Submit</button>
 	</form>
