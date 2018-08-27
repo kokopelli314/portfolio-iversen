@@ -10,12 +10,19 @@ html
 		link(rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous")
 
 	body
-		div.foreground-wrapper#app
-			include includes/header.html
+		#app
+			//- Just while testing...
+			.page-blocker(v-if="showPageBlocker")
+				.stuff
+					p The incredible awesomeness within is not yet meant for all eyes...
+					input(@input="checkPasscode")
 
-			include includes/index-body.html
+			div.foreground-wrapper
+				include includes/header.html
 
-			include includes/footer.html
+				include includes/index-body.html
+
+				include includes/footer.html
 
 		script(src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js")
 		script(src="js/index.js")

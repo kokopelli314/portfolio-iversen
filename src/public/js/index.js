@@ -1,6 +1,7 @@
 var vm = new Vue({
 	el: '#app',
 	data: {
+		showPageBlocker: true, // during development
 		contactName: '',
 		contactEmail: '',
 		contactPhone: '',
@@ -11,7 +12,12 @@ var vm = new Vue({
 	},
 	methods: {
 		isActive: function(text, elementId) {
-			return (text !== '')
+			return (text !== '');
+		},
+		checkPasscode(event) {
+			if (event.target.value === '2727') {
+				this.showPageBlocker = false;
+			}
 		}
 	}
 });
