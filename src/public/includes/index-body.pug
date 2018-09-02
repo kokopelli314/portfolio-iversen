@@ -1,0 +1,80 @@
+// Above the fold / intro section
+.section.rectangle-1
+	include header.html
+	.content-wrapper
+		h1.big-text.font-weight-400
+			| Let’s create something great.
+		p
+			| Great design is multiple things, not just aesthetics. It’s a conceptual idea backed by strategy, executed in an unexpected way.
+		.button-wrapper
+			button.round-button See my work
+			button.round-button Contact me
+
+// Featured Project section
+.section.rectangle-2
+	.flex-row
+		img(src='Home-Laptop.jpg', style="height: 368px;")
+		div
+			h1.big-text
+				| Featured Project
+			p
+				| Helping establish a design system at AT&T was not an easy task. Working with multiple stakeholders in multiple orgs, sometimes remotely, in a very small team taught me that there is more to UX than just design.
+			button.round-button.dark See what I did
+	
+	// Design as a Discipline box
+	.breakout-box.flex-row
+		.left-side
+			h1.big-text.quote
+				p.line “I see
+				p.line design as a discipline”
+		.right-side
+			h3.big-text
+				| The heck does that mean?
+			p
+				| Design is not limited to just paper or digital interfaces. It can be used in multiple mediums like architecture, art, culinary
+				| art, etc. Plus it can be used for multiple situations like business decisions, event planning (ask me about my surprise
+				| wedding), and organizing thoughts. This type of mindset not only helps me think creatively, but also analytically.
+			button.round-button.dark See more work
+
+// About Me
+.section.rectangle-3
+	.block-1
+		h1.big-text.white-background.width-8em
+			| About Me
+		p
+			span.white-background
+				| I’m a DFW based designer. I am always trying to make a better version of myself through new challenges. I enjoy growing my
+				| knowledge, my hard skills and my soft skills. (Even outside of design). What challenges can I help you overcome?
+		button.round-button.dark.white-background
+			| Contact me
+	h1.block-2.big-text.quote
+		span.white-background
+			| “I’m Here to Help You”
+
+// Contact Form
+#contact.section.rectangle-4
+	.left-side
+		h1.big-text Let’s Chat
+		p Or just connect on social media.
+		.icon-links.dark.flex-left
+			a(title='Call')
+				i.fas.fa-mobile-alt
+			a(title='Email')
+				i.far.fa-envelope
+			a(title='LinkedIn')
+				i.fab.fa-linkedin-in
+			a(title='Behance')
+				i.fab.fa-behance
+	form.contact-form
+		.field-wrapper(:class="{active: isActive(contactName, 'contact_name')}")
+			input#contact_name(v-model='contactName', type='text', name='contact_name')
+			label(for='contact_name') Name
+		.field-wrapper(:class="{active: isActive(contactEmail, 'contact_email')}")
+			input#contact_email(v-model='contactEmail', type='text', name='contact_email')
+			label(for='contact_email') Email
+		.field-wrapper(:class="{active: isActive(contactPhone, 'contact_phone')}")
+			input#contact_phone(v-model='contactPhone', type='text', name='contact_phone')
+			label(for='contact_phone') Phone (optional)
+		.field-wrapper(:class="{active: isActive(contactMessage, 'contact_message')}")
+			textarea#contact_message(v-model='contactMessage', placeholder='What would you like to chat about?')
+		button.round-button.dark(type='submit') Submit
