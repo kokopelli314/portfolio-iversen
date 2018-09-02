@@ -12,6 +12,7 @@ body {
 }
 p {
 	line-height: 1.5em;
+	font-size: 0.75em;
 }
 
 * {
@@ -47,6 +48,24 @@ p {
 	overflow: auto;
 	padding: 2rem 8rem;
 }
+
+.flex-row {
+	display: flex;
+    flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+.flex-row.two-children > * {
+	width: calc(50% - 4rem);
+}
+.flex-column {
+	display: flex;
+	flex-direction: column;
+}
+.space-around {
+	justify-content: space-around;
+}
+
 @media screen and (max-width: 900px) {
 	.section {
 		padding: 2rem 4rem;
@@ -58,15 +77,6 @@ p {
 	}
 }
 
-.flex-row {
-	display: flex;
-    flex-direction: row;
-	flex-wrap: wrap;
-	justify-content: space-between;
-}
-.space-around {
-	justify-content: space-around;
-}
 
 /* Top Navigation bar */
 .nav-bar {
@@ -213,8 +223,16 @@ footer .right-side {
 .section.rectangle-2 {
 	background-color: #F2F2F2;
 }
+.section.rectangle-2 > .featured-project > .image {
+	overflow: hidden;
+}
+.section.rectangle-2 > .featured-project > .image > img {
+	height: 527px;
+}
+.section.rectangle-2 > .featured-project > .text {
+	padding: 4rem 4rem 2rem 2rem;
+}
 .breakout-box {
-    z-index: 1;
     margin: 4rem 0 2rem 0;
 }
 .breakout-box > div {
@@ -224,9 +242,6 @@ footer .right-side {
 	.breakout-box > div {
 		width: 100%;
 	}
-}
-.breakout-box p {
-	font-size: 0.75em;
 }
 .breakout-box .quote {
 	font-size: 3.33em;
@@ -326,7 +341,7 @@ footer .right-side {
 
 /* General Styling */
 h1 {
-	font-size: 2.2em;
+	/* font-size: 2.2em; */
 }
 .big-text {
     font-family: 'Playfair Display', serif;
