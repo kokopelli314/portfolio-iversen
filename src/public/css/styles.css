@@ -154,12 +154,13 @@ footer .right-side {
 	width: 100%;
     background-color: hsl(0, 0%, 29%);
     opacity: 0.98;
+	background-image: url("../Main_Background.jpg");
 }
 
 .section.rectangle-1 .content-wrapper {
     width: 62%;
     margin: 4em auto 0 auto;
-    text-align: center;
+	text-align: center;
 }
 
 .section.rectangle-1 .content-wrapper * {
@@ -178,7 +179,7 @@ footer .right-side {
 
 /* Second Section - Featured Project */
 .section.rectangle-2 {
-	padding: calc(2rem + 400px) 8rem 2rem 8rem;
+	padding: 2rem 8rem;
 	background-color: #F2F2F2;
 }
 .breakout-box {

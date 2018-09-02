@@ -1,7 +1,7 @@
 var vm = new Vue({
 	el: '#app',
 	data: {
-		showPageBlocker: true, // during development
+		showPageBlocker: false, // during development
 		contactName: '',
 		contactEmail: '',
 		contactPhone: '',
