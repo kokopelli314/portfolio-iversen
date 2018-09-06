@@ -53,16 +53,50 @@ p {
 	overflow: auto;
 }
 
-.bg-white {
+.bg-off-white {
 	background-color: #F2F2F2;
 }
-
-.section {
-    display: block;
-	overflow: auto;
-	padding: 2rem 8rem;
+.bg-white {
+	background-color: white;
 }
 
+.height-full {
+	height: 100%;
+}
+.height-one-half {
+	height: 50%;
+}
+
+.no-padding {
+	padding: 0;
+}
+
+.grid-square {
+	display: grid;
+	grid-template-rows: 1fr 1fr;
+	grid-template-columns: 1fr 1fr;
+	width: calc(100% - 6rem);
+	height: calc(100% - 6rem);
+	margin: 3rem 0;
+}
+.grid-square > div {
+	border-right: 1px solid red;
+	border-bottom: 1px solid red;
+}
+.grid-square > div:nth-child(2n) {
+	border-right: none;
+}
+.grid-square > div:nth-child(3),
+.grid-square > div:nth-child(4) {
+	border-bottom: none;
+}
+.grid-square > div > div {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	height: calc(100% - 4rem);
+	margin: 2rem 0;
+}
 
 .flex-row {
 	display: flex;
@@ -241,7 +275,7 @@ footer .right-side p {
 .image {
 	overflow: hidden;
 }
-.image > img {
+img.home-laptop {
 	height: 527px;
 }
 .section.rectangle-2 > .featured-project > .text {
@@ -345,7 +379,7 @@ footer .right-side p {
 
 
 /* General Styling */
-.big-text {
+.text-serif {
     font-family: 'Playfair Display', serif;
     font-weight: 700;
 }

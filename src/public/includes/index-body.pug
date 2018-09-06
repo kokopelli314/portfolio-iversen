@@ -3,7 +3,7 @@
 	include header.html
 	.rectangle-1
 		.content-wrapper.center
-			h1.big-text.font-weight-400
+			h1.text-serif.font-weight-400
 				| Let’s create something great.
 			p
 				| Great design is multiple things, not just aesthetics. It’s a conceptual idea backed by strategy, executed in an unexpected way.
@@ -12,27 +12,27 @@
 				button.round-button Contact me
 
 // Featured Project section
-.slide.bg-white
+.slide.bg-off-white
 	.ten.columns.offset-by-one
 		.row
 			.one-half.column
 				.image
-					img(src='Home-Laptop.jpg')
+					img.home-laptop(src='Home-Laptop.jpg')
 			.text.one-half.column
-				h1.big-text
+				h1.text-serif
 					| Featured Project
 				p
 					| Helping establish a design system at AT&T was not an easy task. Working with multiple stakeholders in multiple orgs, sometimes remotely, in a very small team taught me that there is more to UX than just design.
 				button.round-button.dark See what I did
-		
+
 		// Design as a Discipline box
 		.row
 			.one-half.column
-				h1.big-text.quote
+				h1.text-serif.quote
 					p.line “I see
 					p.line design as a discipline”
-			.one-half.column
-				h3.big-text
+			.one-half.column.bg-white
+				h3.text-serif
 					| The heck does that mean?
 				p
 					| Design is not limited to just paper or digital interfaces. It can be used in multiple mediums like architecture, art, culinary
@@ -40,11 +40,43 @@
 					| wedding), and organizing thoughts. This type of mindset not only helps me think creatively, but also analytically.
 				button.round-button.dark See more work
 
+// 
+.slide.no-padding.bg-white.flex-row
+	.image.one-third.column
+		img(src='Home-Phone_On_Laptop.jpg')
+	.two-thirds.column
+		.grid-square
+			div
+				div.ten.columns.offset-by-one
+					h3.text-serif User Experience
+					p A look into my processes, sketches, and solutions.
+					div
+						button.round-button.dark See my work
+			div
+				div.ten.columns.offset-by-one
+					h3.text-serif Interface Design
+					p It has to be functional, but it needs to be pretty too.
+					div
+						button.round-button.dark See my work
+			div
+				div.ten.columns.offset-by-one
+					h3.text-serif Advertising
+					p Where I first started my career, a while ago.
+					div
+						button.round-button.dark See my work
+			div
+				div.ten.columns.offset-by-one
+					h3.text-serif Branding
+					p Something I don’t get to do that often anymore, but man is it fun.
+					div 
+						button.round-button.dark See my work
+
+
 // About Me
 .slide.about-me
 	.ten.columns.offset-by-one
 		.one-half.column
-			h1.big-text.white-background.width-8em
+			h1.text-serif.white-background.width-8em
 				| About Me
 			p
 				span.white-background
@@ -52,15 +84,15 @@
 					| knowledge, my hard skills and my soft skills. (Even outside of design). What challenges can I help you overcome?
 			button.round-button.dark.white-background
 				| Contact me
-		h1.one-half.column.big-text.quote
+		h1.one-half.column.text-serif.quote
 			span.white-background
 				| “I’m Here to Help You”
 
 // Contact Form
-#contact.slide.bg-white
+#contact.slide.contact
 	.ten.columns.offset-by-one
 		.one-half.column
-			h1.big-text Let’s Chat
+			h1.text-serif Let’s Chat
 			p Or just connect on social media.
 			.icon-links.dark.flex-left
 				a(title='Call')
