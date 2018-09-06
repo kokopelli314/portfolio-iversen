@@ -38,9 +38,23 @@ p {
 	width: 100%;
 }
 
-.foreground-wrapper {
+.body {
     max-width: 1440px;
-    margin: 0 auto;
+	margin: 0 auto;
+}
+
+.slide {
+	display: block;
+	padding: 2rem 0rem;
+	overflow: auto;
+}
+
+.row {
+	overflow: auto;
+}
+
+.bg-white {
+	background-color: #F2F2F2;
 }
 
 .section {
@@ -48,6 +62,7 @@ p {
 	overflow: auto;
 	padding: 2rem 8rem;
 }
+
 
 .flex-row {
 	display: flex;
@@ -87,7 +102,7 @@ p {
     height: 80px;
     background-color: transparent;
     color: #FFF;
-    margin: auto 7rem;
+    /* margin: auto 7rem; */
 }
 .nav-bar .moniker {
 	font-size: 2.25rem;
@@ -105,9 +120,9 @@ p {
 
 /* Footer */
 footer {
-    display: flex;
-    justify-content: space-between;
-    margin: 1.5rem 9rem 3rem 9rem;
+    /* display: flex; */
+    /* justify-content: space-between; */
+    margin: 1.5rem auto 3rem auto;
     background-color: transparent;
     color: #FFF;
     font-size: 0.75em;
@@ -141,6 +156,11 @@ footer .right-side {
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
+	height: 100%;
+	min-height: 100px;
+}
+footer .right-side p {
+	text-align: right;
 }
 
 /* Font Awesome icons */
@@ -184,49 +204,44 @@ footer .right-side {
 
 
 /* First Section - Intro */
-.section.rectangle-1 {
+.slide.intro-image {
+	background-color: hsl(0, 0%, 29%);
+	background: url("../Home-Main_Background.jpg") no-repeat center center fixed;
+	background-size: cover;
 	padding: 0;
+}
+.slide .rectangle-1 {
     color: #FFF;
 	min-height: 640px;
 	width: 100%;
-    background-color: hsl(0, 0%, 29%);
     opacity: 0.98;
-	background: url("../Home-Main_Background.jpg") no-repeat center center fixed;
-	background-size: cover;
-	min-height: 719px;
 }
 
-.section.rectangle-1 > .content-wrapper {
-    width: 62%;
+.center-h {
+	margin-left: auto;
+	margin-right: auto;
+}
+.slide .rectangle-1 > .content-wrapper {
+    max-width: 900px;
     margin: 6em auto 0 auto;
 	text-align: center;
 }
 
-.section.rectangle-1 > .content-wrapper > * {
+.slide .rectangle-1 > .content-wrapper > * {
     margin: 1em auto;
 }
-.section.rectangle-1 > .content-wrapper > .button-wrapper > button {
+.slide .rectangle-1 > .content-wrapper > .button-wrapper > button {
 	margin: 1em 0.25em;
-}
-
-/* Fold image - bridging rectangles 1 and 2 */
-.fold-image {
-	width: 1170px;
-	height: 501px;
-	position: absolute;
-	top: 69%;
-	left: 50%;
-	margin-left: -585px;
 }
 
 /* Second Section - Featured Project */
 .section.rectangle-2 {
 	background-color: #F2F2F2;
 }
-.section.rectangle-2 > .featured-project > .image {
+.image {
 	overflow: hidden;
 }
-.section.rectangle-2 > .featured-project > .image > img {
+.image > img {
 	height: 527px;
 }
 .section.rectangle-2 > .featured-project > .text {
@@ -238,14 +253,18 @@ footer .right-side {
 .breakout-box > div {
 	width: calc(50% - 4rem);
 }
+.breakout-box .quote {
+	font-size: 3.33em;
+}
 @media screen and (max-width: 1100px) {
 	.breakout-box > div {
 		width: 100%;
 	}
+	.breakout-box .quote {
+		font-size: 3em;
+	}
 }
-.breakout-box .quote {
-	font-size: 3.33em;
-}
+
 .breakout-box .left-side {
 	margin: 1rem auto;
 }
@@ -262,32 +281,18 @@ footer .right-side {
 
 
 /* Third Section - About Me */
-.section.rectangle-3 {
-    background-color: burlywood;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    letter-spacing: 1px;
-	padding-top: 8rem;
-	padding-bottom: 8rem;
+.about-me {
 }
-.section.section.rectangle-3 > * {
-    width: 50%;
-}
-/* margin on middle element(s) */
-.section.section.rectangle-3 .block-1
-    > *:not(:first-child):not(:last-child) {
-    margin: 1em 0;
-}
-.width-8em {
-    width: 8em;
+.slide.about-me {
+	background-color: burlywood;
+	background: url("../Home-About_Me.jpg") no-repeat center center;
+	background-size: cover;
+	min-height: 560px;
 }
 
 /* Fourth Section - Contact Form */
-.section.section.rectangle-4 {
-	background-color: hsl(249, 12%, 79%);
-	display: flex;
-	justify-content: space-between;
+.slide.contact {
+	background-color: hsl(245, 11%, 79%);
 }
 .contact-form {
 	width: 100%;
@@ -340,12 +345,14 @@ footer .right-side {
 
 
 /* General Styling */
-h1 {
-	/* font-size: 2.2em; */
-}
 .big-text {
     font-family: 'Playfair Display', serif;
     font-weight: 700;
+}
+.bigish-text {
+    font-family: 'Playfair Display', serif;
+	font-weight: 700;
+	font-size: 0.5rem;
 }
 .font-weight-400 {
     font-weight: 400;
