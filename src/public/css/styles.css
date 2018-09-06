@@ -240,11 +240,16 @@ footer .right-side p {
 /* First Section - Intro */
 .slide.intro-image {
 	background-color: hsl(0, 0%, 29%);
-	background: url("../Home-Main_Background.jpg") no-repeat center center fixed;
+	background: url("../Home-Main_Background.jpg");
+	background-repeat: no-repeat;
+	background-position: top;
 	background-size: cover;
 	padding: 0;
 }
 .slide .rectangle-1 {
+	display: flex;
+	justify-content: center;
+	align-items: center;
     color: #FFF;
 	min-height: 640px;
 	width: 100%;
@@ -257,12 +262,14 @@ footer .right-side p {
 }
 .slide .rectangle-1 > .content-wrapper {
     max-width: 900px;
-    margin: 6em auto 0 auto;
 	text-align: center;
 }
-
 .slide .rectangle-1 > .content-wrapper > * {
-    margin: 1em auto;
+    margin: 0.5em auto;
+}
+.slide .rectangle-1 > .content-wrapper > p {
+	font-size: 1.75rem;
+	font-weight: 100;
 }
 .slide .rectangle-1 > .content-wrapper > .button-wrapper > button {
 	margin: 1em 0.25em;
