@@ -1,8 +1,31 @@
-<header class="nav-bar ten columns offset-by-one">
+<!-- <header class="nav-bar ten columns offset-by-one">
 	<h3 class="moniker">Ian Iversen</h3>
 	<div class="nav-items">
 		<a>Work</a>
 		<a>About me</a>
 		<a href="#contact"><button class="round-button">Contact</button></a>
 	</div>
+</header> -->
+<header class="nav-bar ten columns offset-by-one">
+	<h1 class="moniker">Ian Iversen</h1>
+
+	<a @click="openMenu" href="#main-menu" class="menu-toggle" role="button" id="main-menu-toggle" aria-expanded="false" aria-controls="main-menu"
+	 aria-label="Open main menu">
+		<span class="sr-only">Open main menu</span>
+		<span class="fas fa-bars" aria-hidden="true"></span>
+	</a>
+
+	<nav id="main-menu" ref="mainMenu" class="main-menu" role="navigation" aria-expanded="false" aria-label="Main menu">
+		<a @click="closeMenu" href="#main-menu-toggle" class="menu-close" role="button" id="main-menu-close" aria-expanded="false" aria-controls="main-menu"
+		 aria-label="Close main menu">
+			<span class="sr-only">Close main menu</span>
+			<span><i class="fas fa-times" aria-hidden="true"></i></span>
+		</a>
+		<ul>
+			<li><a href="#">Work</a></li>
+			<li><a href="#">About Me</a></li>
+			<li href="#contact"><a href="#"><button class="round-button">Contact</button></a></li>
+		</ul>
+	</nav>
+	<a href="#main-menu-toggle" class="backdrop" tabindex="-1" aria-hidden="true" hidden></a>
 </header>
