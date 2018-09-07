@@ -1,4 +1,5 @@
-/* Grid based on Skeleton */
+/* Grid based on Skeleton (with some changes) */
+
 /*
 * Skeleton V2.0.4
 * Copyright 2014, Dave Gamache
@@ -53,6 +54,7 @@
   .eight.columns                  { width: 65.3333333333%; }
   .nine.columns                   { width: 74.0%;          }
   .ten.columns                    { width: 82.6666666667%; }
+  .ten-rows                       { height: 82.6666666667%; }
   .eleven.columns                 { width: 91.3333333333%; }
   .twelve.columns                 { width: 100%; margin-left: 0; }
 

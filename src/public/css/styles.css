@@ -70,6 +70,34 @@ p {
 .no-padding {
 	padding: 0;
 }
+.padding-top-bottom {
+	padding-top: 2rem;
+	padding-bottom: 2rem;
+}
+.content-container {
+	padding-top: 2rem;
+	padding-bottom: 2rem;
+	display: flex;
+	justify-content: space-between;
+	flex-direction: column;
+	align-items: flex-start;
+}
+.content-container > * {
+	margin-top: 2rem;
+	margin-bottom: 2rem;
+}
+.content-container > *:first-child,
+.content-container > *:last-child {
+	margin-top: 0;
+	margin-bottom: 0;
+}
+.content-container.align-center {
+	align-items: center;
+}
+.content-container > .align-end {
+	align-self: flex-end;
+}
+
 
 .grid-square {
 	display: grid;
@@ -255,23 +283,18 @@ footer .right-side p {
 	width: 100%;
     opacity: 0.98;
 }
-
-.center-h {
-	margin-left: auto;
-	margin-right: auto;
-}
-.slide .rectangle-1 > .content-wrapper {
+.slide .rectangle-1 > .content-container {
     max-width: 900px;
 	text-align: center;
 }
-.slide .rectangle-1 > .content-wrapper > * {
+.slide .rectangle-1 > .content-container > * {
     margin: 0.5em auto;
 }
-.slide .rectangle-1 > .content-wrapper > p {
+.slide .rectangle-1 > .content-container > p {
 	font-size: 1.75rem;
 	font-weight: 100;
 }
-.slide .rectangle-1 > .content-wrapper > .button-wrapper > button {
+.slide .rectangle-1 > .content-container > .button-wrapper > button {
 	margin: 1em 0.25em;
 }
 
@@ -322,8 +345,6 @@ img.home-laptop {
 
 
 /* Third Section - About Me */
-.about-me {
-}
 .slide.about-me {
 	background-color: burlywood;
 	background: url("../Home-About_Me.jpg") no-repeat center center;
@@ -334,10 +355,6 @@ img.home-laptop {
 /* Fourth Section - Contact Form */
 .slide.contact {
 	background-color: hsl(245, 11%, 79%);
-}
-.contact-form {
-	width: 100%;
-    max-width: 500px;
 }
 .contact-form .field-wrapper {
     position: relative;

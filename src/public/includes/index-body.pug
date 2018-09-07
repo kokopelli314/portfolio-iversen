@@ -2,7 +2,7 @@
 .slide.intro-image
 	include header.html
 	.rectangle-1
-		.content-wrapper.center
+		.content-container
 			h1.text-serif.font-weight-400
 				| Let’s create something great.
 			p
@@ -19,11 +19,12 @@
 				.image
 					img.home-laptop(src='Home-Laptop.jpg')
 			.text.one-half.column
-				h1.text-serif
-					| Featured Project
-				p
-					| Helping establish a design system at AT&T was not an easy task. Working with multiple stakeholders in multiple orgs, sometimes remotely, in a very small team taught me that there is more to UX than just design.
-				button.round-button.dark See what I did
+				.ten.columns.offset-by-one.content-container
+					h1.text-serif
+						| Featured Project
+					p
+						| Helping establish a design system at AT&T was not an easy task. Working with multiple stakeholders in multiple orgs, sometimes remotely, in a very small team taught me that there is more to UX than just design.
+					button.round-button.dark See what I did
 
 		// Design as a Discipline box
 		.row
@@ -32,13 +33,14 @@
 					p.line “I see
 					p.line design as a discipline”
 			.one-half.column.bg-white
-				h3.text-serif
-					| The heck does that mean?
-				p
-					| Design is not limited to just paper or digital interfaces. It can be used in multiple mediums like architecture, art, culinary
-					| art, etc. Plus it can be used for multiple situations like business decisions, event planning (ask me about my surprise
-					| wedding), and organizing thoughts. This type of mindset not only helps me think creatively, but also analytically.
-				button.round-button.dark See more work
+				.ten.columns.offset-by-one.content-container
+					h3.text-serif
+						| The heck does that mean?
+					p
+						| Design is not limited to just paper or digital interfaces. It can be used in multiple mediums like architecture, art, culinary
+						| art, etc. Plus it can be used for multiple situations like business decisions, event planning (ask me about my surprise
+						| wedding), and organizing thoughts. This type of mindset not only helps me think creatively, but also analytically.
+					button.round-button.dark See more work
 
 // 
 .slide.no-padding.bg-white.flex-row
@@ -76,17 +78,18 @@
 .slide.about-me
 	.ten.columns.offset-by-one
 		.one-half.column
-			h1.text-serif.white-background.width-8em
-				| About Me
-			p
-				span.white-background
-					| I’m a DFW based designer. I am always trying to make a better version of myself through new challenges. I enjoy growing my
-					| knowledge, my hard skills and my soft skills. (Even outside of design). What challenges can I help you overcome?
-			button.round-button.dark.white-background
-				| Contact me
-		h1.one-half.column.text-serif.quote
-			span.white-background
-				| “I’m Here to Help You”
+			.content-container.ten.columns
+				h1.text-serif.white-background.width-8em
+					| About Me
+				p
+					span.white-background
+						| I’m a DFW based designer. I am always trying to make a better version of myself through new challenges. I enjoy growing my knowledge, my hard skills, my soft skills- and I hate making multiple trips with grocery bags.
+				button.round-button.dark.white-background
+					| Contact me
+		h1.one-half.column.text-serif
+			.content-container.ten-columns.offset-by-two
+				span.white-background.quote.align-end
+					| “I’m doin’ this in one trip”
 
 // Contact Form
 #contact.slide.contact
