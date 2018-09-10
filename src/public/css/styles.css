@@ -340,19 +340,24 @@ img.home-laptop {
 
 /* Fourth Section - Contact Form */
 .slide.contact {
-	min-height: 630px;
-	background: url("../Home-Contact_Photo.jpg");
-	background-size: cover;
-	background-repeat: no-repeat;
-	background-position: bottom;
 	background-color: hsl(245, 11%, 79%);
-	padding: 0;
 }
-.slide.contact .info-text {
-	margin-top: 2rem;
-}
-.contact-form {
-	margin-left: 4rem;
+/* Show image if using big screen */
+@media (min-width: 1200px) {
+	.slide.contact {
+		min-height: 630px;
+		background-image: url("../Home-Contact_Photo.jpg");
+		background-size: cover;
+		background-repeat: no-repeat;
+		background-position: bottom;
+		padding: 0;
+	}
+	.slide.contact .info-text {
+		margin-top: 2rem;
+	}
+	.contact-form {
+		margin-left: 4rem;
+	}
 }
 .contact-form .field-wrapper {
     position: relative;
