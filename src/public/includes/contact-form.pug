@@ -1,0 +1,29 @@
+// Contact Form
+#contact.slide.contact
+	.ten.columns.offset-by-one
+		.one-half.column.info-text
+			h1.text-serif Let’s Chat
+			p Or just connect on social media.
+			.icon-links.dark.flex-left
+				a(title='Call')
+					i.fas.fa-mobile-alt
+				a(title='Email')
+					i.far.fa-envelope
+				a(title='LinkedIn')
+					i.fab.fa-linkedin-in
+				a(title='Behance')
+					i.fab.fa-behance
+		.one-half.column
+			form.contact-form
+				.field-wrapper(:class="{active: isActive(contactName, 'contact_name')}")
+					input#contact_name(v-model='contactName', type='text', name='contact_name')
+					label(for='contact_name') Name
+				.field-wrapper(:class="{active: isActive(contactEmail, 'contact_email')}")
+					input#contact_email(v-model='contactEmail', type='text', name='contact_email')
+					label(for='contact_email') Email
+				.field-wrapper(:class="{active: isActive(contactPhone, 'contact_phone')}")
+					input#contact_phone(v-model='contactPhone', type='text', name='contact_phone')
+					label(for='contact_phone') Phone (optional)
+				.field-wrapper(:class="{active: isActive(contactMessage, 'contact_message')}")
+					textarea#contact_message(v-model='contactMessage', placeholder='What would you like to chat about?')
+				button.round-button.dark(type='submit') Submit
