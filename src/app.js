@@ -17,6 +17,10 @@ app.get('/', (req, res) => {
 	res.render(path.join(`${STATIC_DIR}`, 'index'))
 })
 
+app.get('/work/ui', (req, res) => {
+	res.render(path.join(`${STATIC_DIR}`, 'work-ui'))
+})
+
 // Start it up
 app.listen(PORT, () => {
 	console.log(`Express is listening on port ${PORT}!`)

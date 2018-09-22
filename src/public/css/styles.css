@@ -10,9 +10,9 @@ body {
     font-weight: 300;
     box-sizing: border-box;
 }
-p {
+p, span {
 	line-height: 1.5em;
-	font-size: 0.75em;
+	font-size: 0.8em;
 }
 
 * {
@@ -70,6 +70,9 @@ p {
 .no-padding {
 	padding: 0;
 }
+.padding-top-1 {
+	padding-top: 1rem;
+}
 .padding-top-bottom {
 	padding-top: 2rem;
 	padding-bottom: 2rem;
@@ -81,6 +84,9 @@ p {
 	justify-content: space-between;
 	flex-direction: column;
 	align-items: flex-start;
+}
+.content-container.align-right {
+	align-items: flex-end;
 }
 .content-container > * {
 	margin-top: 2rem;
@@ -107,15 +113,15 @@ p {
 	height: calc(100% - 6rem);
 	margin: 3rem 0;
 }
-.grid-square > div {
+.grid-square.red-cross > div {
 	border-right: 1px solid red;
 	border-bottom: 1px solid red;
 }
-.grid-square > div:nth-child(2n) {
+.grid-square.red-cross > div:nth-child(2n) {
 	border-right: none;
 }
-.grid-square > div:nth-child(3),
-.grid-square > div:nth-child(4) {
+.grid-square.red-cross > div:nth-child(3),
+.grid-square.red-cross > div:nth-child(4) {
 	border-bottom: none;
 }
 .grid-square > div > div {
@@ -133,13 +139,13 @@ p {
 		grid-template-columns: 1fr;
 		width: 100%;
 	}
-	.grid-square > div {
-		border-right: none;
-	}
 	.grid-square > div > div {
 		width: 100%;
 	}
-	.grid-square > div:nth-child(3) {
+	.grid-square.red-cross > div {
+		border-right: none;
+	}
+	.grid-square.red-cross > div:nth-child(3) {
 		border-bottom: 1px solid red;
 	}
 }
@@ -299,9 +305,11 @@ footer .right-side p {
 	justify-content: center;
 	align-items: center;
     color: #FFF;
-	min-height: 640px;
 	width: 100%;
     opacity: 0.98;
+}
+.min-height {
+	min-height: 640px;
 }
 .slide .rectangle-1 > .content-container {
     max-width: 900px;
@@ -324,6 +332,10 @@ footer .right-side p {
 }
 .image {
 	overflow: hidden;
+}
+.image.align-left {
+	margin-left: 0;
+	float: left;
 }
 img.home-laptop {
 	height: 527px;
@@ -410,7 +422,7 @@ img.home-laptop {
 /* General Styling */
 .text-serif {
     font-family: 'Playfair Display', serif;
-    font-weight: 700;
+    
 }
 .bigish-text {
     font-family: 'Playfair Display', serif;
@@ -419,6 +431,16 @@ img.home-laptop {
 }
 .font-weight-400 {
     font-weight: 400;
+}
+.text-blue {
+	color: #066D8B;
+}
+.text-red {
+	color: #C31D40;
+}
+
+.align-right {
+	text-align: right;
 }
 
 p {
