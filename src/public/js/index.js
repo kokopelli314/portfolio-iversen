@@ -47,6 +47,7 @@ var vm = new Vue({
  * "destination:{Destination element ID}"
 */
 document.addEventListener('click', function(event) {
+	console.log('click')
 	if (event.target.matches('.scroll-to-link')) {
 		// See if we're scrolling on the current page
 		let paths = event.target.id.split(':')
