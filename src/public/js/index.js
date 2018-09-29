@@ -50,7 +50,7 @@ document.addEventListener('click', function(event) {
 	if (event.target.matches('.scroll-to-link')) {
 		// See if we're scrolling on the current page
 		let paths = event.target.id.split(':')
-		let elementId = paths[paths.length-1]
+		let elementId = paths[1]
 		if (paths[0] === 'destination' && document.getElementById(elementId)) {
 			console.log('scrollin ' + elementId)
 			scrollIntoView(elementId)
