@@ -1,3 +1,6 @@
+/*
+ * Forms and menus are handled by Vue
+*/
 var vm = new Vue({
 	el: '#app',
 	data: {
@@ -14,7 +17,7 @@ var vm = new Vue({
 		},
 		checkPasscode(event) {
 			if (event.target.value === '2727') {
-				this.showPageBlocker = false;
+				this.showPageBlocker = false
 			}
 		},
 		openMenu(event) {
@@ -34,6 +37,27 @@ var vm = new Vue({
 				menu.setAttribute('aria-hidden', true)
 				menu.setAttribute('aria-expanded', false)
 			}
-		}
+		},
+		
 	}
 });
+
+/*
+ * A vanilla scroll listener for items with class '.scroll-to-link-in-href'
+*/
+document.addEventListener('click', function(event) {
+	if (event.target.matches('.scroll-to-link-in-href')) {
+		scrollIntoView(event.target.href)
+		event.preventDefault()
+	}
+})
+
+function scrollIntoView(elementId) {
+	let scrollOptions = {
+		behavior: 'smooth',
+		block: 'start'
+	}
+	document.getElementById('destination-work-link').scrollIntoView(scrollOptions);
+}
+
+
