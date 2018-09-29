@@ -43,12 +43,19 @@ var vm = new Vue({
 });
 
 /*
- * A vanilla scroll listener for items with class '.scroll-to-link-in-href'
+ * A vanilla scroll listener for items with class '.scroll-to-link' and id in form
+ * "destination:{Destination element ID}"
 */
 document.addEventListener('click', function(event) {
-	if (event.target.matches('.scroll-to-link-in-href')) {
-		scrollIntoView(event.target.href)
-		event.preventDefault()
+	if (event.target.matches('.scroll-to-link')) {
+		// See if we're scrolling on the current page
+		let paths = event.target.id.split(':')
+		let elementId = paths[paths.length-1]
+		if (paths[0] === 'destination' && document.getElementById(elementId)) {
+			console.log('scrollin ' + elementId)
+			scrollIntoView(elementId)
+			event.preventDefault()
+		}
 	}
 })
 
@@ -57,7 +64,7 @@ function scrollIntoView(elementId) {
 		behavior: 'smooth',
 		block: 'start'
 	}
-	document.getElementById('destination-work-link').scrollIntoView(scrollOptions);
+	document.getElementById(elementId).scrollIntoView(scrollOptions);
 }
 
 
