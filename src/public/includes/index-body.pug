@@ -8,8 +8,11 @@
 			p
 				| Great design is multiple things, not just aesthetics. It’s a conceptual idea backed by strategy, executed in an unexpected way.
 			.button-wrapper
-				button.round-button See my work
-				button.round-button Contact me
+				a(href='/#work')
+					button.round-button(
+						class='scroll-to-link'
+						id='destination:work:from-index'
+					) See my work
 
 // Featured Project section
 .slide.bg-off-white
@@ -24,7 +27,8 @@
 						| Featured Project
 					p
 						| Helping establish a design system at AT&T was not an easy task. Working with multiple stakeholders in multiple orgs, sometimes remotely, in a very small team taught me that there is more to UX than just design.
-					button.round-button.dark See what I did
+					a(href='/work/ux')
+						button.round-button.dark See what I did
 
 		// Design as a Discipline box
 		.row
@@ -40,10 +44,14 @@
 						| Design is not limited to just paper or digital interfaces. It can be used in multiple mediums like architecture, art, culinary
 						| art, etc. Plus it can be used for multiple situations like business decisions, event planning (ask me about my surprise
 						| wedding), and organizing thoughts. This type of mindset not only helps me think creatively, but also analytically.
-					button.round-button.dark See more work
+					a(href='/#work')
+						button.round-button(
+							class='scroll-to-link'
+							id='destination:work:from-index'
+						) See my work
 
 // 4 Square Content boxes
-.slide.no-padding.bg-white.flex-row#work-link
+.slide.no-padding.bg-white.flex-row#work
 	.image.one-third.column
 		img(src='Home-Phone_On_Laptop.jpg')
 	.two-thirds.column
@@ -53,25 +61,29 @@
 					h3.text-serif User Experience
 					p A look into my processes, sketches, and solutions.
 					div
-						button.round-button.dark View
+						a(href='/work/ux')
+							button.round-button.dark View
 			div
 				div.ten.columns.offset-by-one
 					h3.text-serif Interface Design
 					p It has to be functional, but it needs to be pretty too.
 					div
-						button.round-button.dark View
+						a(href='/work/ui')
+							button.round-button.dark View
 			div
 				div.ten.columns.offset-by-one
 					h3.text-serif Advertising
 					p Where I first started my career, a while ago.
 					div
-						button.round-button.dark View
+						a(href='https://www.behance.net/gallery/37184395/Motorhead-Zone-Web-Ads' target='_blank')
+							button.round-button.dark View
 			div
 				div.ten.columns.offset-by-one
 					h3.text-serif Branding
 					p Something I don’t get to do that often anymore, but man is it fun.
-					div 
-						button.round-button.dark View
+					div
+						a(href='https://www.behance.net/gallery/37621705/Forefront-Experience-Cards' target='_blank')
+							button.round-button.dark View
 
 
 // About Me
