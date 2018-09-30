@@ -23,7 +23,7 @@
 					img.home-laptop(src='Home-Laptop.jpg')
 			.text.one-half.column
 				.ten.columns.offset-by-one.content-container
-					h1.text-serif
+					h4.text-serif
 						| Featured Project
 					p
 						| Helping establish a design system at AT&T was not an easy task. Working with multiple stakeholders in multiple orgs, sometimes remotely, in a very small team taught me that there is more to UX than just design.
@@ -31,14 +31,14 @@
 						button.round-button.dark See what I did
 
 		// Design as a Discipline box
-		.row
-			.one-half.column
+		.row.flex
+			.one-half.column.flex-basis-1.flex-column.space-around
 				h1.text-serif.quote.text-xlg
 					.line “I see
 					.line design as a discipline”
 			.one-half.column.bg-white
 				.ten.columns.offset-by-one.content-container
-					h3.text-serif
+					h5.text-serif
 						| The heck does that mean?
 					p
 						| Design is not limited to just paper or digital interfaces. It can be used in multiple mediums like architecture, art, culinary
@@ -57,29 +57,29 @@
 	.two-thirds.column
 		.grid-square.red-cross
 			div
-				div.ten.columns.offset-by-one
-					h3.text-serif User Experience
+				div.ten.columns.offset-by-one.space-children
+					h5.text-serif User Experience
 					p A look into my processes, sketches, and solutions.
 					div
 						a(href='/work/ux')
 							button.round-button.dark View
 			div
-				div.ten.columns.offset-by-one
-					h3.text-serif Interface Design
+				div.ten.columns.offset-by-one.space-children
+					h5.text-serif Interface Design
 					p It has to be functional, but it needs to be pretty too.
 					div
 						a(href='/work/ui')
 							button.round-button.dark View
 			div
-				div.ten.columns.offset-by-one
-					h3.text-serif Advertising
+				div.ten.columns.offset-by-one.space-children
+					h5.text-serif Advertising
 					p Where I first started my career, a while ago.
 					div
 						a(href='https://www.behance.net/gallery/37184395/Motorhead-Zone-Web-Ads' target='_blank')
 							button.round-button.dark View
 			div
-				div.ten.columns.offset-by-one
-					h3.text-serif Branding
+				div.ten.columns.offset-by-one.flex-row
+					h5.text-serif Branding
 					p Something I don’t get to do that often anymore, but man is it fun.
 					div
 						a(href='https://www.behance.net/gallery/37621705/Forefront-Experience-Cards' target='_blank')
@@ -87,21 +87,21 @@
 
 
 // About Me
-.slide.about-me#about-me
-	.ten.columns.offset-by-one
-		.one-half.column
-			.content-container.ten.columns
+.slide.about-me.flex#about-me
+	.ten.columns.offset-by-one.flex.flex-basis-1
+		.seven.columns.flex.flex-basis-1
+			.content-container.ten.columns.flex-basis-1.flex-column.space-around
 				h1.text-serif.white-background.width-8em
 					| About Me
 				p
-					span.white-background
+					span.white-background.text-medlg
 						| I’m a DFW based designer. I am always trying to make a better version of myself through new challenges. I enjoy growing my knowledge, my hard skills, my soft skills — and I hate making multiple trips with grocery bags.
 				a(href='/#contact')
 					button.round-button.dark.white-background(
 						class='scroll-to-link'
 						id='destination:contact:from-index'
 					) Contact me
-		h1.one-half.column.text-serif
-			.content-container.nine-columns.offset-by-three
+		h1.five.columns.text-serif
+			.content-container
 				.white-background.quote.align-end.text-xlg
 					| “I’m doin’ this in one trip”
