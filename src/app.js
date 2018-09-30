@@ -2,6 +2,7 @@ require('dotenv').config()
 const express = require('express')
 const path = require('path')
 const app = express()
+const router = express.Router()
 
 const PORT = process.env.PORT
 const STATIC_DIR = path.join(__dirname, 'public')
@@ -13,17 +14,20 @@ app.use(express.static(process.env.MEDIA_DIR))
 // Pug
 app.set('view engine', 'pug')
 
-app.get('/', (req, res) => {
+router.get('/', (req, res) => {
 	res.render(path.join(`${STATIC_DIR}`, 'index'))
 })
 
-app.get('/work/ui', (req, res) => {
+router.get('/work/ui', (req, res) => {
 	res.render(path.join(`${STATIC_DIR}`, 'work-ui'))
 })
 
-app.get('/work/ux', (req, res) => {
+router.get('/work/ux', (req, res) => {
 	res.render(path.join(`${STATIC_DIR}`, 'work-ux'))
 })
+
+
+app.use(process.env.BASE_PATH || '/', router)
 
 // Start it up
 app.listen(PORT, () => {
