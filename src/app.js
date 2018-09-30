@@ -15,8 +15,18 @@ const ROOT_PATH = process.env.ROOT_PATH || '/'
 // Serve static files and image media
 app.use(ROOT_PATH, express.static(STATIC_DIR))
 app.use(ROOT_PATH, express.static(process.env.MEDIA_DIR))
+
 // Template engine === Pug
 app.set('view engine', 'pug')
+
+// Redirect requests missing the trailing slash
+app.use(function(req, res, next) {
+	if (req.path.substr(-1) !== '/') {
+		res.redirect(301, req.path + '/')
+	} else {
+		next()
+	}
+})
 
 ///////////////////
 // Views
