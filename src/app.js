@@ -5,11 +5,12 @@ const app = express()
 const router = express.Router()
 
 const PORT = process.env.PORT
+const ROOT_PATH = process.env.ROOT_PATH || '/'
 const STATIC_DIR = path.join(__dirname, 'public')
 
 // Serve static files and image media
-app.use(express.static(STATIC_DIR))
-app.use(express.static(process.env.MEDIA_DIR))
+app.use(ROOT_PATH, express.static(STATIC_DIR))
+app.use(ROOT_PATH, express.static(process.env.MEDIA_DIR))
 
 // Pug
 app.set('view engine', 'pug')
@@ -27,7 +28,7 @@ router.get('/work/ux', (req, res) => {
 })
 
 
-app.use(process.env.BASE_PATH || '/', router)
+app.use(ROOT_PATH, router)
 
 // Start it up
 app.listen(PORT, () => {
