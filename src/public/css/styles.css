@@ -365,6 +365,11 @@ footer .right-side p {
 .min-height {
 	min-height: 640px;
 }
+@media (max-width: 500px) {
+	.min-height {
+		min-height: 400px;
+	}
+}
 .slide .rectangle-1 > .content-container {
     max-width: 900px;
 	text-align: center;
@@ -497,6 +502,9 @@ img.home-laptop {
 }
 .font-weight-400 {
     font-weight: 400;
+}
+.font-weight-bold {
+    font-weight: bold;
 }
 .text-blue {
 	color: #066D8B;

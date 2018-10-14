@@ -27,6 +27,7 @@ var vm = new Vue({
 			this.toggleMenu(false, event)
 		},
 		toggleMenu(showMenu, event) {
+			console.log(`setting menu open to ${showMenu}`)
 			event.preventDefault()
 			let menu = this.$refs.mainMenu
 
@@ -47,7 +48,6 @@ var vm = new Vue({
  * "destination:{Destination element ID}"
 */
 document.addEventListener('click', function(event) {
-	console.log('click')
 	if (event.target.matches('.scroll-to-link')) {
 		// See if we're scrolling on the current page
 		let paths = event.target.id.split(':')
@@ -57,6 +57,15 @@ document.addEventListener('click', function(event) {
 			scrollIntoView(elementId)
 			event.preventDefault()
 		}
+	}
+	console.log(event.target)
+
+	// Ensure the menu is closed after clicking anything
+	if (!(event.target.parentElement.matches('.menu-toggle')
+		|| event.target.matches('.menu-toggle'))) {
+		let menu = document.getElementById('main-menu')
+		menu.setAttribute('aria-hidden', true)
+		menu.setAttribute('aria-expanded', false)
 	}
 })
 
