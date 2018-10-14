@@ -54,8 +54,8 @@ p, span {
 
 .slide {
 	display: block;
-	padding: 2rem auto;
 	overflow: auto;
+	padding-bottom: 2rem;
 }
 
 .responsive-margin {
@@ -109,8 +109,7 @@ p, span {
 	margin-top: 0;
 }
 .content-container {
-	padding-top: 2rem;
-	padding-bottom: 2rem;
+	padding: 2rem 1rem;
 	display: flex;
 	justify-content: space-between;
 	flex-direction: column;
@@ -169,11 +168,12 @@ p, span {
 	flex-direction: column;
 	justify-content: space-between;
 	height: calc(100% - 4rem);
+	min-height: 8rem;
 	margin: 2rem 0;
 }
 
 /* Mobile -- Show 1 square per row */
-@media (max-width: 700px) {
+@media (max-width: 1000px) {
 	.grid-square {
 		grid-template-rows: 1fr;
 		grid-template-columns: 1fr;
@@ -521,6 +521,13 @@ p {
     text-transform: uppercase;
     font-weight: bold;
     max-width: 7em;
+}
+/* Center quotes on smaller screens */
+@media (max-width: 750px) {
+	.quote {
+		width: 100%;
+		max-width: 100%;
+	}
 }
 .round-button {
     cursor: pointer;
