@@ -1,18 +1,27 @@
 html, body {
     margin: 0;
 }
+html {
+	font-family: 'Lato', sans-serif;
+	font-size: 16px;
+}
 
 body {
-    background-color: hsl(0, 0%, 16%);
+	background-color: hsl(0, 0%, 16%);
     color: hsl(0, 0%, 16%);
-    font-family: 'Lato', sans-serif;
-	font-size: 1.7em;
     font-weight: 300;
-    box-sizing: border-box;
+	box-sizing: border-box;
+	font-size: 1.67rem;
 }
 p, span {
 	line-height: 2rem;
-	font-size: 1.25rem;
+	font-size: 1.67rem;
+}
+
+@media (max-width: 500px) {
+	html {
+		font-size: 12px;
+	}
 }
 
 * {
@@ -273,8 +282,8 @@ footer ul li a {
 	text-decoration: none;
 	font-size: 1.33rem;
 }
-footer .credits {
-    font-size: 0.8em;
+footer .credits span {
+    font-size: 1.33rem;
 }
 footer .credits a,
 footer .credits a:link,
