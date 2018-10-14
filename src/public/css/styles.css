@@ -45,8 +45,18 @@ p, span {
 
 .slide {
 	display: block;
-	padding: 2rem 0rem;
+	padding: 2rem auto;
 	overflow: auto;
+}
+
+.responsive-margin {
+	padding-left: 20px;
+	padding-right: 20px;
+}
+@media (min-width: 400px) {
+	.responsive-margin {
+		padding: auto;
+	}
 }
 
 .row {
@@ -154,7 +164,7 @@ p, span {
 }
 
 /* Mobile -- Show 1 square per row */
-@media (max-width: 500px) {
+@media (max-width: 700px) {
 	.grid-square {
 		grid-template-rows: 1fr;
 		grid-template-columns: 1fr;
@@ -333,7 +343,6 @@ footer .right-side p {
 	background-repeat: no-repeat;
 	background-position: top;
 	background-size: cover;
-	padding: 0;
 }
 .slide .rectangle-1 {
 	display: flex;
@@ -394,6 +403,10 @@ img.home-laptop {
 /* Fourth Section - Contact Form */
 .slide.contact {
 	background-color: hsl(245, 11%, 79%);
+	padding-bottom: 2rem;
+}
+.slide.contact .info-text {
+	margin-top: 2rem;
 }
 /* Show image if using big screen */
 @media (min-width: 1200px) {
@@ -403,10 +416,6 @@ img.home-laptop {
 		background-size: cover;
 		background-repeat: no-repeat;
 		background-position: bottom;
-		padding: 0;
-	}
-	.slide.contact .info-text {
-		margin-top: 2rem;
 	}
 	.contact-form {
 		margin-left: 4rem;

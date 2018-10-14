@@ -1,5 +1,5 @@
 // Above the fold / intro section
-.slide.intro-image
+.slide.intro-image.responsive-margin
 	include header.html
 	.rectangle-1.min-height
 		.content-container
@@ -21,7 +21,7 @@
 			.one-half.column
 				.image
 					img.home-laptop(src='Home-Laptop.jpg')
-			.text.one-half.column
+			.text.one-half.column.responsive-margin
 				.ten.columns.offset-by-one.content-container
 					h4.text-serif
 						| Featured Project
@@ -31,7 +31,7 @@
 						button.round-button.dark See what I did
 
 		// Design as a Discipline box
-		.row.flex
+		.row.flex.responsive-margin
 			.one-half.column.flex-basis-1.flex-column.space-around
 				h1.text-serif.quote.text-xlg
 					.line “I see
@@ -54,7 +54,7 @@
 .slide.no-padding.bg-white.flex-row#work
 	.image.one-third.column
 		img(src='Home-Phone_On_Laptop.jpg')
-	.two-thirds.column
+	.two-thirds.column.responsive-margin
 		.grid-square.red-cross
 			div
 				div.ten.columns.offset-by-one.space-children
@@ -88,7 +88,7 @@
 
 // About Me
 .slide.about-me.flex#about-me
-	.ten.columns.offset-by-one.flex.flex-basis-1
+	.ten.columns.offset-by-one.flex.flex-basis-1.responsive-margin
 		.seven.columns.flex.flex-basis-1
 			.content-container.ten.columns.flex-basis-1.flex-column.space-around
 				h1.text-serif.white-background.width-8em
